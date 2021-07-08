@@ -4,8 +4,12 @@
   "description": "webisite for locating stores and ordering services",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon ./server.js --exec babel-node -e js"
   },
+  "keywords": [
+    "babel",
+    "es6"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RahulAnand442001/store-locator.git"
@@ -23,6 +27,9 @@
     "mongoose": "^5.13.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.10"
+    "nodemon": "^2.0.10",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
   }
 }

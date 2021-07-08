@@ -1,11 +1,12 @@
 require("dotenv").config();
-const path = require("path");
-const express = require("express");
+import path from "path";
+import express from "express";
 
 const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 
 // routes
+app.get("/", (req, res) => res.send("hello"));
 
 // port configuration
 const PORT = process.env.PORT || 8000;
