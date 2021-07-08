@@ -1,0 +1,28 @@
+{
+  "name": "store-locator",
+  "version": "1.0.0",
+  "description": "webisite for locating stores and ordering services",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RahulAnand442001/store-locator.git"
+  },
+  "author": "Rahul-Subhodip-Payal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RahulAnand442001/store-locator/issues"
+  },
+  "homepage": "https://github.com/RahulAnand442001/store-locator#readme",
+  "dependencies": {
+    "collections": "^5.1.12",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.10"
+  }
+}
