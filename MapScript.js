@@ -12,7 +12,7 @@ mapboxgl.accessToken =
 const map = new mapboxgl.Map({
 	container: "map",
 	style: "mapbox://styles/mapbox/light-v10",
-	center: [19.601194, 75.552979], // 20.9517° N, 85.0985° E
+	center: [85.83692320687396, 20.2556780617967],
 	zoom: 13,
 	scrollZoom: true,
 });
@@ -27,14 +27,14 @@ map.on("load", (e) => {
 });
 
 //  data
-const stores = {
+var stores = {
 	type: "FeatureCollection",
 	features: [
 		{
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [-77.034084142948, 38.909671288923],
+				coordinates: [85.78692320687396, 20.9056780617967],
 			},
 			properties: {
 				phoneFormatted: "(202) 234-7336",
@@ -51,7 +51,7 @@ const stores = {
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [-77.049766, 38.900772],
+				coordinates: [85.73692320687396, 20.6856780617967],
 			},
 			properties: {
 				phoneFormatted: "(202) 507-8357",
@@ -68,7 +68,7 @@ const stores = {
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [-77.043929, 38.910525],
+				coordinates: [85.70692320687396, 20.6556780617967],
 			},
 			properties: {
 				phoneFormatted: "(202) 387-9338",
@@ -85,7 +85,7 @@ const stores = {
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [-77.0672, 38.90516896],
+				coordinates: [85.63692320687396, 20.5156780617967],
 			},
 			properties: {
 				phoneFormatted: "(202) 337-9338",
@@ -102,7 +102,7 @@ const stores = {
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [-77.002583742142, 38.887041080933],
+				coordinates: [85.59692320687396, 20.4856780617967],
 			},
 			properties: {
 				phoneFormatted: "(202) 547-9338",
@@ -119,7 +119,7 @@ const stores = {
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [-76.933492720127, 38.99225245786],
+				coordinates: [85.56692320687396, 20.4556780617967],
 			},
 			properties: {
 				address: "8204 Baltimore Ave",
@@ -133,7 +133,7 @@ const stores = {
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [-77.097083330154, 38.980979],
+				coordinates: [85.50692320687396, 20.3856780617967],
 			},
 			properties: {
 				phoneFormatted: "(301) 654-7336",
@@ -150,7 +150,7 @@ const stores = {
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [-77.359425054188, 38.958058116661],
+				coordinates: [85.48692320687396, 20.3556780617967],
 			},
 			properties: {
 				phoneFormatted: "(571) 203-0082",
@@ -167,7 +167,7 @@ const stores = {
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [-77.10853099823, 38.880100922392],
+				coordinates: [85.46692320687396, 20.3156780617967],
 			},
 			properties: {
 				phoneFormatted: "(703) 522-2016",
@@ -184,7 +184,7 @@ const stores = {
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [-75.28784, 40.008008],
+				coordinates: [85.42692320687396, 20.2956780617967],
 			},
 			properties: {
 				phoneFormatted: "(610) 642-9400",
@@ -200,7 +200,7 @@ const stores = {
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [-75.20121216774, 39.954030175164],
+				coordinates: [85.38692320687396, 20.2656780617967],
 			},
 			properties: {
 				phoneFormatted: "(215) 386-1365",
@@ -216,7 +216,7 @@ const stores = {
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [-77.043959498405, 38.903883387232],
+				coordinates: [85.34692320687396, 20.2156780617967],
 			},
 			properties: {
 				phoneFormatted: "(202) 331-3355",
