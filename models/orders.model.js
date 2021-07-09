@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import GraphNode from "../helper/order.helper";
 
 const OrderSchema = new mongoose.Schema({
 	source: {},
@@ -13,6 +12,9 @@ const OrderSchema = new mongoose.Schema({
 			type: Number,
 			default: 0,
 		},
+		contact: String,
 	},
 	time: Date,
 });
+
+export default OrderSchema;
