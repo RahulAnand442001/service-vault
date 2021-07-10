@@ -14,7 +14,6 @@ const services = {
 				country: "India",
 				postalCode: "760007",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Rasulgarh: 175,
@@ -34,7 +33,6 @@ const services = {
 				country: "India",
 				postalCode: "752001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Cuttack: 82,
@@ -54,11 +52,10 @@ const services = {
 				country: "India",
 				postalCode: "753001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Rourkela: 300,
-				"Sahid Nagar": 24,
+				"Saheed Nagar": 24,
 			},
 		},
 		{
@@ -74,7 +71,6 @@ const services = {
 				country: "India",
 				postalCode: "752050",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Puri: 63,
@@ -95,7 +91,6 @@ const services = {
 				country: "India",
 				postalCode: "769001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Berhampur: 475,
@@ -115,7 +110,6 @@ const services = {
 				country: "India",
 				postalCode: "751010",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Cuttack: 23,
@@ -135,7 +129,6 @@ const services = {
 				country: "India",
 				postalCode: "751007",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Berhampur: 173,
@@ -155,7 +148,6 @@ const services = {
 				country: "India",
 				postalCode: "768001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Berhampur: 326,
@@ -176,7 +168,6 @@ const services = {
 				country: "India",
 				postalCode: "767001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Jeypore: 272,
@@ -196,7 +187,6 @@ const services = {
 				country: "India",
 				postalCode: "764001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Berhampur: 339,
@@ -217,7 +207,6 @@ const services = {
 				country: "India",
 				postalCode: "765001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Sambalpur: 332,
@@ -238,7 +227,6 @@ const services = {
 				country: "India",
 				postalCode: "756100",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Cuttack: 106,
@@ -259,7 +247,6 @@ const services = {
 				country: "India",
 				postalCode: "755036",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Khorda: 124,
@@ -281,7 +268,6 @@ const services = {
 				country: "India",
 				postalCode: "757001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Bhadrak: 124,
@@ -302,7 +288,6 @@ const services = {
 				country: "India",
 				postalCode: "758001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Rourkela: 185,
@@ -324,7 +309,6 @@ const services = {
 				country: "India",
 				postalCode: "762014",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Balangir: 98,
@@ -334,4 +318,4 @@ const services = {
 	],
 };
 
-export default services;
+module.exports = services;
