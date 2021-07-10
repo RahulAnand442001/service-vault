@@ -18,6 +18,9 @@ h1 {
 	font-weight: 400;
 	line-height: 20px;
 	padding: 20px 2px;
+	text-align: center;
+	background-color: #00853e;
+	color: #ffffff;
 }
 
 a {
@@ -52,7 +55,6 @@ a:hover {
 	border-bottom: 1px solid #eee;
 	height: 60px;
 	line-height: 60px;
-	padding: 0 10px;
 }
 
 /* listing section stylings */
@@ -179,4 +181,35 @@ a:hover {
 
 .mapboxgl-popup {
 	padding-bottom: 50px;
+}
+
+/* search box */
+
+.sidebar__searchbox {
+}
+
+.search__input {
+	height: 5rem;
+	max-height: 5rem;
+	line-height: 1.1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem 0.5rem;
+}
+
+.search__input .pin__input {
+	padding: 0.5rem;
+	border-radius: 100px;
+	outline: none;
+	border: 1px solid grey;
+}
+
+#search__output {
+	text-align: center;
+}
+
+#search__location {
+	color: red;
+	margin: 10px;
 }
