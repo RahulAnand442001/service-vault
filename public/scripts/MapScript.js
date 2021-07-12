@@ -378,6 +378,7 @@ const buildLocationList = (data) => {
 	data.features.forEach((store, i) => {
 		const { id, properties } = store;
 
+		// element creation
 		const listings = document.getElementById("listings");
 		const listing = listings.appendChild(document.createElement("div"));
 		listing.id = `listing-${id}`;
@@ -393,11 +394,32 @@ const buildLocationList = (data) => {
 		details.className = "details";
 		details.innerHTML = `<span class="address__details">${properties.city} · ${properties.phoneFormatted}</span>`;
 
+		// dialog box functionality
+
 		details.innerHTML += `
 			<button type="submit" class="page__link" id="page__link-${id}">
 			<img src="../assets/eye-solid.svg" alt="eye" class="visit__logo">
 			</button>
 		`;
+
+		details.innerHTML += `
+			<dialog id="favDialog-${id}" class="details__dialog">
+				<form method="dialog">
+					<p>${properties.city}</p>
+					<button value="cancel">Cancel</button>
+				</form>
+	  		</dialog>
+		`;
+
+		let insightBtn = document.getElementById(`page__link-${id}`);
+		let dialogBox = document.getElementById(`favDialog-${id}`);
+		insightBtn.addEventListener("click", function onOpen() {
+			if (typeof dialogBox.showModal === "function") {
+				dialogBox.showModal();
+			} else {
+				alert("The <dialog> API is not supported by this browser");
+			}
+		});
 	});
 };
 
