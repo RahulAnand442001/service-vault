@@ -7,6 +7,7 @@ const services = {
 				type: "Point",
 				coordinates: [84.79274355855, 19.28905928025253],
 			},
+			id: 1,
 			properties: {
 				phoneFormatted: "(+91) 9875463879",
 				address: "Station Square",
@@ -26,6 +27,7 @@ const services = {
 				type: "Point",
 				coordinates: [85.8617817237996, 19.8170676248685],
 			},
+			id: 2,
 			properties: {
 				phoneFormatted: "(+91) 9569241871",
 				address: "Little Chef",
@@ -45,6 +47,7 @@ const services = {
 				type: "Point",
 				coordinates: [85.88389975480322, 20.46770883866313],
 			},
+			id: 3,
 			properties: {
 				phoneFormatted: "(+91) 9629778521",
 				address: "Kanika RajBhati Fort",
@@ -64,6 +67,7 @@ const services = {
 				type: "Point",
 				coordinates: [85.61878219250218, 20.168284334957477],
 			},
+			id: 4,
 			properties: {
 				phoneFormatted: "(+91) 9211547890",
 				address: "Khorda Fort",
@@ -84,6 +88,7 @@ const services = {
 				type: "Point",
 				coordinates: [84.85284671953002, 22.239854981678576],
 			},
+			id: 5,
 			properties: {
 				phoneFormatted: "(+91) 9655432147",
 				address: "Nehru Traffic Park",
@@ -103,6 +108,7 @@ const services = {
 				type: "Point",
 				coordinates: [85.85623449185732, 20.29155365788034],
 			},
+			id: 6,
 			properties: {
 				phoneFormatted: "(+91) 9766548817",
 				address: "Esplanade",
@@ -120,8 +126,9 @@ const services = {
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [85.85623449185732, 20.29155365788034],
+				coordinates: [85.917817237996, 19.8170676248685],
 			},
+			id: 7,
 			properties: {
 				phoneFormatted: "(03222) 244157 ",
 				address: "Utkal Kanika Gallaria",
@@ -141,6 +148,7 @@ const services = {
 				type: "Point",
 				coordinates: [83.97492147985565, 21.459833562314216],
 			},
+			id: 8,
 			properties: {
 				phoneFormatted: "(06856) 704598",
 				address: "City Centre Mall",
@@ -161,6 +169,7 @@ const services = {
 				type: "Point",
 				coordinates: [83.48527323030089, 20.7037338716532],
 			},
+			id: 9,
 			properties: {
 				phoneFormatted: "(06789) 962322",
 				address: "Ambika Telecom",
@@ -180,6 +189,7 @@ const services = {
 				type: "Point",
 				coordinates: [82.57341349649118, 18.85689773376403],
 			},
+			id: 10,
 			properties: {
 				phoneFormatted: "(+91) 1234567898",
 				address: "S P Enterprises",
@@ -200,6 +210,7 @@ const services = {
 				type: "Point",
 				coordinates: [83.40762814818618, 19.16802830955146],
 			},
+			id: 11,
 			properties: {
 				phoneFormatted: "(03225) 911790",
 				address: "Kapilas Hotel",
@@ -220,6 +231,7 @@ const services = {
 				type: "Point",
 				coordinates: [86.50492147985565, 21.06713126560804],
 			},
+			id: 12,
 			properties: {
 				phoneFormatted: "(+91) 6384569721",
 				address: "Behera Complex",
@@ -240,6 +252,7 @@ const services = {
 				type: "Point",
 				coordinates: [86.34349632243288, 20.853543729445107],
 			},
+			id: 13,
 			properties: {
 				phoneFormatted: "(08856) 123456",
 				address: "Future Travels",
@@ -261,6 +274,7 @@ const services = {
 				type: "Point",
 				coordinates: [86.73651547654663, 21.936987974511126],
 			},
+			id: 14,
 			properties: {
 				phoneFormatted: "(+91) 7058974563",
 				address: "Chandan Bazar",
@@ -280,6 +294,7 @@ const services = {
 				type: "Point",
 				coordinates: [85.59620748055067, 21.643524391737813],
 			},
+			id: 15,
 			properties: {
 				phoneFormatted: "(02235) 707077",
 				phone: "9875463879",
@@ -301,6 +316,7 @@ const services = {
 				type: "Point",
 				coordinates: [84.320248065, 20.84172445],
 			},
+			id: 16,
 			properties: {
 				phoneFormatted: "(+91) 9875463879",
 				phone: "9875463879",

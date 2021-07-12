@@ -45,6 +45,8 @@ const getShortestRoute = (servicesList, serviceReq) => {
 			}
 		}
 	}
+
+	return services[dest];
 };
 
-getShortestRoute(servicesData, randomService);
+export { getAllServices, getShortestRoute };

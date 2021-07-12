@@ -12,7 +12,7 @@ mapboxgl.accessToken =
 const map = new mapboxgl.Map({
 	container: "map",
 	style: "mapbox://styles/mapbox/light-v10",
-	center: [84.23214445880126, 20.476081036941025], //85.83692320687396, 20.2556780617967
+	center: [84.23214445880126, 20.476081036941025],
 	zoom: 6.8,
 	scrollZoom: true,
 });
@@ -26,6 +26,7 @@ const stores = {
 				type: "Point",
 				coordinates: [84.79274355855, 19.28905928025253],
 			},
+			id: 1,
 			properties: {
 				phoneFormatted: "(+91) 9875463879",
 				address: "Station Square",
@@ -33,7 +34,6 @@ const stores = {
 				country: "India",
 				postalCode: "760007",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Rasulgarh: 175,
@@ -44,8 +44,9 @@ const stores = {
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [85.8617817237996, 19.8170676248685],
+				coordinates: [85.917817237996, 19.8170676248685],
 			},
+			id: 2,
 			properties: {
 				phoneFormatted: "(+91) 9569241871",
 				address: "Little Chef",
@@ -53,7 +54,6 @@ const stores = {
 				country: "India",
 				postalCode: "752001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Cuttack: 82,
@@ -66,6 +66,7 @@ const stores = {
 				type: "Point",
 				coordinates: [85.88389975480322, 20.46770883866313],
 			},
+			id: 3,
 			properties: {
 				phoneFormatted: "(+91) 9629778521",
 				address: "Kanika RajBhati Fort",
@@ -73,11 +74,10 @@ const stores = {
 				country: "India",
 				postalCode: "753001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Rourkela: 300,
-				"Sahid Nagar": 24,
+				"Saheed Nagar": 24,
 			},
 		},
 		{
@@ -86,6 +86,7 @@ const stores = {
 				type: "Point",
 				coordinates: [85.61878219250218, 20.168284334957477],
 			},
+			id: 4,
 			properties: {
 				phoneFormatted: "(+91) 9211547890",
 				address: "Khorda Fort",
@@ -93,7 +94,6 @@ const stores = {
 				country: "India",
 				postalCode: "752050",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Puri: 63,
@@ -107,6 +107,7 @@ const stores = {
 				type: "Point",
 				coordinates: [84.85284671953002, 22.239854981678576],
 			},
+			id: 5,
 			properties: {
 				phoneFormatted: "(+91) 9655432147",
 				address: "Nehru Traffic Park",
@@ -114,7 +115,6 @@ const stores = {
 				country: "India",
 				postalCode: "769001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Berhampur: 475,
@@ -127,6 +127,7 @@ const stores = {
 				type: "Point",
 				coordinates: [85.85623449185732, 20.29155365788034],
 			},
+			id: 6,
 			properties: {
 				phoneFormatted: "(+91) 9766548817",
 				address: "Esplanade",
@@ -134,7 +135,6 @@ const stores = {
 				country: "India",
 				postalCode: "751010",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Cuttack: 23,
@@ -145,8 +145,9 @@ const stores = {
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [85.85623449185732, 20.29155365788034],
+				coordinates: [85.84758586393309, 20.28973409579],
 			},
+			id: 7,
 			properties: {
 				phoneFormatted: "(03222) 244157 ",
 				address: "Utkal Kanika Gallaria",
@@ -154,7 +155,6 @@ const stores = {
 				country: "India",
 				postalCode: "751007",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Berhampur: 173,
@@ -167,6 +167,7 @@ const stores = {
 				type: "Point",
 				coordinates: [83.97492147985565, 21.459833562314216],
 			},
+			id: 8,
 			properties: {
 				phoneFormatted: "(06856) 704598",
 				address: "City Centre Mall",
@@ -174,7 +175,6 @@ const stores = {
 				country: "India",
 				postalCode: "768001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Berhampur: 326,
@@ -188,6 +188,7 @@ const stores = {
 				type: "Point",
 				coordinates: [83.48527323030089, 20.7037338716532],
 			},
+			id: 9,
 			properties: {
 				phoneFormatted: "(06789) 962322",
 				address: "Ambika Telecom",
@@ -195,7 +196,6 @@ const stores = {
 				country: "India",
 				postalCode: "767001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Jeypore: 272,
@@ -208,6 +208,7 @@ const stores = {
 				type: "Point",
 				coordinates: [82.57341349649118, 18.85689773376403],
 			},
+			id: 10,
 			properties: {
 				phoneFormatted: "(+91) 1234567898",
 				address: "S P Enterprises",
@@ -215,7 +216,6 @@ const stores = {
 				country: "India",
 				postalCode: "764001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Berhampur: 339,
@@ -229,6 +229,7 @@ const stores = {
 				type: "Point",
 				coordinates: [83.40762814818618, 19.16802830955146],
 			},
+			id: 11,
 			properties: {
 				phoneFormatted: "(03225) 911790",
 				address: "Kapilas Hotel",
@@ -236,7 +237,6 @@ const stores = {
 				country: "India",
 				postalCode: "765001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Sambalpur: 332,
@@ -250,6 +250,7 @@ const stores = {
 				type: "Point",
 				coordinates: [86.50492147985565, 21.06713126560804],
 			},
+			id: 12,
 			properties: {
 				phoneFormatted: "(+91) 6384569721",
 				address: "Behera Complex",
@@ -257,7 +258,6 @@ const stores = {
 				country: "India",
 				postalCode: "756100",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Cuttack: 106,
@@ -271,6 +271,7 @@ const stores = {
 				type: "Point",
 				coordinates: [86.34349632243288, 20.853543729445107],
 			},
+			id: 13,
 			properties: {
 				phoneFormatted: "(08856) 123456",
 				address: "Future Travels",
@@ -278,7 +279,6 @@ const stores = {
 				country: "India",
 				postalCode: "755036",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Khorda: 124,
@@ -293,6 +293,7 @@ const stores = {
 				type: "Point",
 				coordinates: [86.73651547654663, 21.936987974511126],
 			},
+			id: 14,
 			properties: {
 				phoneFormatted: "(+91) 7058974563",
 				address: "Chandan Bazar",
@@ -300,7 +301,6 @@ const stores = {
 				country: "India",
 				postalCode: "757001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Bhadrak: 124,
@@ -313,6 +313,7 @@ const stores = {
 				type: "Point",
 				coordinates: [85.59620748055067, 21.643524391737813],
 			},
+			id: 15,
 			properties: {
 				phoneFormatted: "(02235) 707077",
 				phone: "9875463879",
@@ -321,7 +322,6 @@ const stores = {
 				country: "India",
 				postalCode: "758001",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Rourkela: 185,
@@ -335,6 +335,7 @@ const stores = {
 				type: "Point",
 				coordinates: [84.320248065, 20.84172445],
 			},
+			id: 16,
 			properties: {
 				phoneFormatted: "(+91) 9875463879",
 				phone: "9875463879",
@@ -343,7 +344,6 @@ const stores = {
 				country: "India",
 				postalCode: "762014",
 				state: "Odisha",
-				distance: 0,
 			},
 			edges: {
 				Balangir: 98,
@@ -361,8 +361,6 @@ map.on("load", (e) => {
 	addMarkers();
 	buildLocationList(stores);
 });
-
-stores.features.forEach((store, i) => (store.properties.id = i));
 
 map.on("click", function (e) {
 	const features = map.queryRenderedFeatures(e.point, {
@@ -413,6 +411,13 @@ const buildLocationList = (data) => {
 			details.innerHTML +=
 				"<p><strong>" + roundedDistance + " miles away</strong></p>";
 		}
+
+		//TODO:
+		details.innerHTML += `
+			<form action="/register">
+			<button type="submit">GO</button>
+			</form>
+		`;
 
 		link.addEventListener("click", (e) => {
 			for (let i = 0; i < data.features.length; i++) {
