@@ -369,77 +369,42 @@ map.on("click", function (e) {
 
 	if (features.length) {
 		const clickedPoint = features[0];
-
 		flyToStore(clickedPoint);
-
 		createPopUp(clickedPoint);
-
-		const activeItem = document.getElementsByClassName("active");
-		if (activeItem[0]) {
-			activeItem[0].classList.remove("active");
-		}
-		const listing = document.getElementById(
-			"listing-" + clickedPoint.properties.id,
-		);
-		listing.classList.add("active");
 	}
 });
 
 const buildLocationList = (data) => {
 	data.features.forEach((store, i) => {
-		const prop = store.properties;
+		const { id, properties } = store;
 
 		const listings = document.getElementById("listings");
 		const listing = listings.appendChild(document.createElement("div"));
-		listing.id = "listing-" + data.features[i].properties.id;
+		listing.id = `listing-${id}`;
 		listing.className = "item";
 
 		const link = listing.appendChild(document.createElement("a"));
 		link.href = "#";
 		link.className = "title";
-		link.id = "link-" + prop.id;
-		link.innerHTML = prop.address;
+		link.id = `link-${id}`;
+		link.innerHTML = properties.address;
 
 		const details = listing.appendChild(document.createElement("div"));
-		details.innerHTML = prop.city;
+		details.className = "details";
+		details.innerHTML = `<span class="address__details">${properties.city} · ${properties.phoneFormatted}</span>`;
 
-		if (prop.phoneFormatted) {
-			details.innerHTML += " · " + prop.phoneFormatted;
-		}
-		if (prop.distance) {
-			let roundedDistance = Math.round(prop.distance * 100) / 100;
-			details.innerHTML +=
-				"<p><strong>" + roundedDistance + " miles away</strong></p>";
-		}
-
-		//TODO:
 		details.innerHTML += `
-			<form action="/register">
-			<button type="submit">GO</button>
-			</form>
+			<button type="submit" class="page__link" id="page__link-${id}">
+			<img src="../assets/eye-solid.svg" alt="eye" class="visit__logo">
+			</button>
 		`;
-
-		link.addEventListener("click", (e) => {
-			for (let i = 0; i < data.features.length; i++) {
-				if (this.id === "link-" + data.features[i].properties.id) {
-					let clickedListing = data.features[i];
-					flyToStore(clickedListing);
-					createPopUp(clickedListing);
-				}
-			}
-			let activeItem = document.getElementsByClassName("active");
-			if (activeItem[0]) {
-				activeItem[0].classList.remove("active");
-			}
-			this.parentNode.classList.add("active");
-		});
 	});
 };
 
 const flyToStore = (currentFeature) => {
 	map.flyTo({
 		center: currentFeature.geometry.coordinates,
-		zoom: 15,
+		zoom: 10,
 	});
 };
 
@@ -461,21 +426,13 @@ const createPopUp = (currentFeature) => {
 const addMarkers = () => {
 	stores.features.forEach((marker) => {
 		const el = document.createElement("div");
-		el.id = "marker-" + marker.properties.id;
+		el.id = "marker-" + marker.id;
 		el.className = "marker";
 
 		el.addEventListener("click", function (e) {
 			flyToStore(marker);
 			createPopUp(marker);
-			const activeItem = document.getElementsByClassName("active");
 			e.stopPropagation();
-			if (activeItem[0]) {
-				activeItem[0].classList.remove("active");
-			}
-			const listing = document.getElementById(
-				"listing-" + marker.properties.id,
-			);
-			listing.classList.add("active");
 		});
 
 		new mapboxgl.Marker(el, { offset: [0, -23] })
@@ -483,17 +440,3 @@ const addMarkers = () => {
 			.addTo(map);
 	});
 };
-
-const searchInput = document.querySelector(".pin__input");
-const search__output = document.querySelector("#search__output");
-
-searchInput.addEventListener("input", (e) => {
-	const text = searchInput.value;
-	stores.features.map((store) => {
-		if (store.properties.postalCode.includes(text)) {
-			search__output.innerHTML = `
-				<h2 id="search__location">${store.properties.address}</h2>`;
-			return;
-		}
-	});
-});
