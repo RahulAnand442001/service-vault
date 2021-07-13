@@ -19,6 +19,7 @@ const getAllServices = (serviceList) => {
 const getShortestRoute = (servicesList, serviceReq) => {
 	const dest = serviceReq.destination.properties.city;
 	const source = serviceReq.source;
+	const order = serviceReq.orders;
 	const services = getAllServices(servicesList);
 	for (let service in services) {
 		if (services[service]["data"]["city"] === source["properties"]["city"]) {
@@ -46,7 +47,7 @@ const getShortestRoute = (servicesList, serviceReq) => {
 		}
 	}
 
-	return services[dest];
+	return { data: services[dest], orderReq: order };
 };
 
 export { getAllServices, getShortestRoute };

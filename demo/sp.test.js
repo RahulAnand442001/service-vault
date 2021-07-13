@@ -28,4 +28,5 @@ const randomService = {
 			Puri: 381,
 		},
 	},
+	orders: {},
 };

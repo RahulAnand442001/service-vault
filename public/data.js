@@ -20,6 +20,11 @@ const services = {
 				Rasulgarh: 175,
 				Puri: 147,
 			},
+			items: [
+				["Fridge", 100],
+				["Smartphones", 500],
+				["PC", 5000],
+			],
 		},
 		{
 			type: "Feature",
@@ -40,6 +45,11 @@ const services = {
 				Cuttack: 82,
 				Rasulgarh: 61,
 			},
+			items: [
+				["Keyboards & Mouse", 8000],
+				["Earphones", 1500],
+				["Chargers & Adapters", 1000],
+			],
 		},
 		{
 			type: "Feature",
@@ -60,6 +70,11 @@ const services = {
 				Rourkela: 300,
 				"Saheed Nagar": 24,
 			},
+			items: [
+				["HardDrives", 1000],
+				["Earphones", 500],
+				["Fridge", 100],
+			],
 		},
 		{
 			type: "Feature",
@@ -81,6 +96,11 @@ const services = {
 				Berhampur: 147,
 				Rasulgarh: 31,
 			},
+			items: [
+				["Televisions", 10000],
+				["Fans", 500],
+				["Fridge", 100],
+			],
 		},
 		{
 			type: "Feature",
@@ -101,6 +121,11 @@ const services = {
 				Berhampur: 475,
 				Puri: 381,
 			},
+			items: [
+				["Televisions", 1000],
+				["Mixers & Blenders", 500],
+				["Fridge", 100],
+			],
 		},
 		{
 			type: "Feature",
@@ -121,6 +146,11 @@ const services = {
 				Cuttack: 23,
 				Rourkela: 321,
 			},
+			items: [
+				["Ovens", 1000],
+				["Mixers & Blenders", 1500],
+				["Earphones", 1000],
+			],
 		},
 		{
 			type: "Feature",
@@ -141,6 +171,11 @@ const services = {
 				Berhampur: 173,
 				Puri: 68,
 			},
+			items: [
+				["Keyboards", 100],
+				["Smartphones", 6000],
+				["Vaccume CLeaner", 900],
+			],
 		},
 		{
 			type: "Feature",
@@ -162,6 +197,11 @@ const services = {
 				Balangir: 124,
 				Jeypore: 396,
 			},
+			items: [
+				["Geyzers", 700],
+				["ACs & Coolers", 10000],
+				["Vaccume CLeaner", 900],
+			],
 		},
 		{
 			type: "Feature",
@@ -182,6 +222,11 @@ const services = {
 				Jeypore: 272,
 				Rayagada: 215,
 			},
+			items: [
+				["Hair Dryers", 700],
+				["Washing Machines", 2000],
+				["Water Boilers", 1300],
+			],
 		},
 		{
 			type: "Feature",
@@ -203,6 +248,11 @@ const services = {
 				Rayagada: 134,
 				Khorda: 488,
 			},
+			items: [
+				["Laptops", 1700],
+				["PC", 2000],
+				["Smartphones", 700],
+			],
 		},
 		{
 			type: "Feature",
@@ -224,6 +274,11 @@ const services = {
 				Rasulgarh: 385,
 				Khorda: 355,
 			},
+			items: [
+				["Earphones", 100],
+				["Chargers & Adapters", 550],
+				["Electronic Boards", 200],
+			],
 		},
 		{
 			type: "Feature",
@@ -245,6 +300,11 @@ const services = {
 				Rasulgarh: 123,
 				Balangir: 405,
 			},
+			items: [
+				["Washing Machines", 400],
+				["Televisions", 950],
+				["Vaccum Cleaners", 200],
+			],
 		},
 		{
 			type: "Feature",
@@ -267,6 +327,11 @@ const services = {
 				Bhadrak: 36,
 				"Saheed Nagar": 97,
 			},
+			items: [
+				["Tubelights and Smart Bulbs", 400],
+				["Routers & Modems", 150],
+				["Irons", 50],
+			],
 		},
 		{
 			type: "Feature",
@@ -287,6 +352,11 @@ const services = {
 				Bhadrak: 124,
 				Keonjhar: 164,
 			},
+			items: [
+				["Rice Cookers", 1000],
+				["Heaphones", 100],
+				["Digit Watches", 5000],
+			],
 		},
 		{
 			type: "Feature",
@@ -309,6 +379,11 @@ const services = {
 				Khorda: 227,
 				Cuttack: 181,
 			},
+			items: [
+				["Room Heaters", 1000],
+				["Torch & Emergency Lights", 500],
+				["Earphones", 5000],
+			],
 		},
 		{
 			type: "Feature",
@@ -330,6 +405,11 @@ const services = {
 				Balangir: 98,
 				Sambalpur: 98,
 			},
+			items: [
+				["Home Theaters", 10000],
+				["Video Players", 500],
+				["Cameras", 9000],
+			],
 		},
 	],
 };

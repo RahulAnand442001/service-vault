@@ -39,12 +39,17 @@ const stores = {
 				Rasulgarh: 175,
 				Puri: 147,
 			},
+			items: [
+				["Fridge", 100],
+				["Smartphones", 500],
+				["PC", 5000],
+			],
 		},
 		{
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [85.917817237996, 19.8170676248685],
+				coordinates: [85.8617817237996, 19.8170676248685],
 			},
 			id: 2,
 			properties: {
@@ -59,6 +64,11 @@ const stores = {
 				Cuttack: 82,
 				Rasulgarh: 61,
 			},
+			items: [
+				["Keyboards & Mouse", 8000],
+				["Earphones", 1500],
+				["Chargers & Adapters", 1000],
+			],
 		},
 		{
 			type: "Feature",
@@ -79,6 +89,11 @@ const stores = {
 				Rourkela: 300,
 				"Saheed Nagar": 24,
 			},
+			items: [
+				["HardDrives", 1000],
+				["Earphones", 500],
+				["Fridge", 100],
+			],
 		},
 		{
 			type: "Feature",
@@ -100,6 +115,11 @@ const stores = {
 				Berhampur: 147,
 				Rasulgarh: 31,
 			},
+			items: [
+				["Televisions", 10000],
+				["Fans", 500],
+				["Fridge", 100],
+			],
 		},
 		{
 			type: "Feature",
@@ -120,6 +140,11 @@ const stores = {
 				Berhampur: 475,
 				Puri: 381,
 			},
+			items: [
+				["Televisions", 1000],
+				["Mixers & Blenders", 500],
+				["Fridge", 100],
+			],
 		},
 		{
 			type: "Feature",
@@ -140,12 +165,17 @@ const stores = {
 				Cuttack: 23,
 				Rourkela: 321,
 			},
+			items: [
+				["Ovens", 1000],
+				["Mixers & Blenders", 1500],
+				["Earphones", 1000],
+			],
 		},
 		{
 			type: "Feature",
 			geometry: {
 				type: "Point",
-				coordinates: [85.84758586393309, 20.28973409579],
+				coordinates: [85.917817237996, 19.8170676248685],
 			},
 			id: 7,
 			properties: {
@@ -160,6 +190,11 @@ const stores = {
 				Berhampur: 173,
 				Puri: 68,
 			},
+			items: [
+				["Keyboards", 100],
+				["Smartphones", 6000],
+				["Vaccume CLeaner", 900],
+			],
 		},
 		{
 			type: "Feature",
@@ -181,6 +216,11 @@ const stores = {
 				Balangir: 124,
 				Jeypore: 396,
 			},
+			items: [
+				["Geyzers", 700],
+				["ACs & Coolers", 10000],
+				["Vaccume CLeaner", 900],
+			],
 		},
 		{
 			type: "Feature",
@@ -201,6 +241,11 @@ const stores = {
 				Jeypore: 272,
 				Rayagada: 215,
 			},
+			items: [
+				["Hair Dryers", 700],
+				["Washing Machines", 2000],
+				["Water Boilers", 1300],
+			],
 		},
 		{
 			type: "Feature",
@@ -222,6 +267,11 @@ const stores = {
 				Rayagada: 134,
 				Khorda: 488,
 			},
+			items: [
+				["Laptops", 1700],
+				["PC", 2000],
+				["Smartphones", 700],
+			],
 		},
 		{
 			type: "Feature",
@@ -243,6 +293,11 @@ const stores = {
 				Rasulgarh: 385,
 				Khorda: 355,
 			},
+			items: [
+				["Earphones", 100],
+				["Chargers & Adapters", 550],
+				["Electronic Boards", 200],
+			],
 		},
 		{
 			type: "Feature",
@@ -264,6 +319,11 @@ const stores = {
 				Rasulgarh: 123,
 				Balangir: 405,
 			},
+			items: [
+				["Washing Machines", 400],
+				["Televisions", 950],
+				["Vaccum Cleaners", 200],
+			],
 		},
 		{
 			type: "Feature",
@@ -286,6 +346,11 @@ const stores = {
 				Bhadrak: 36,
 				"Saheed Nagar": 97,
 			},
+			items: [
+				["Tubelights and Smart Bulbs", 400],
+				["Routers & Modems", 150],
+				["Irons", 50],
+			],
 		},
 		{
 			type: "Feature",
@@ -306,6 +371,11 @@ const stores = {
 				Bhadrak: 124,
 				Keonjhar: 164,
 			},
+			items: [
+				["Rice Cookers", 1000],
+				["Heaphones", 100],
+				["Digit Watches", 5000],
+			],
 		},
 		{
 			type: "Feature",
@@ -328,6 +398,11 @@ const stores = {
 				Khorda: 227,
 				Cuttack: 181,
 			},
+			items: [
+				["Room Heaters", 1000],
+				["Torch & Emergency Lights", 500],
+				["Earphones", 5000],
+			],
 		},
 		{
 			type: "Feature",
@@ -349,6 +424,11 @@ const stores = {
 				Balangir: 98,
 				Sambalpur: 98,
 			},
+			items: [
+				["Home Theaters", 10000],
+				["Video Players", 500],
+				["Cameras", 9000],
+			],
 		},
 	],
 };
@@ -377,6 +457,7 @@ map.on("click", function (e) {
 const buildLocationList = (data) => {
 	data.features.forEach((store, i) => {
 		const { id, properties } = store;
+		const items = store.items;
 
 		// element creation
 		const listings = document.getElementById("listings");
@@ -404,9 +485,36 @@ const buildLocationList = (data) => {
 
 		details.innerHTML += `
 			<dialog id="favDialog-${id}" class="details__dialog">
-				<form method="dialog">
-					<p>${properties.city}</p>
-					<button value="cancel">Cancel</button>
+				<form method="dialog" id="dialog__form-${id}">
+					<div id="details__dest-${id}" class="dest">
+						<p><span class="dest__label">Address:</span> ${properties.address}, ${properties.city}</p>
+						<p><span class="dest__label">Phone:</span> ${properties.phoneFormatted}</p>		<p><span class="dest__label">Pincode:</span> ${properties.postalCode}</p>
+					</div>
+					<div id="available-services-${id}" class="available__services">
+						<h3 class="available__services-header">AVAILABLE SERVICES</h3>
+						<table style="width:100%">
+							<tr class="available__service available__service-header">
+								<th>Items</th>
+								<th>Quantity</th>
+							</tr>
+							<tr class="available__service">
+								<td>${items[0][0]}</td>
+								<td><input type="number" min="0" max="${items[0][1]}" class="service__input" id="${items[0][0]}" placeholder="max ${items[0][1]}"></td>
+							</tr>
+							<tr class="available__service">
+								<td>${items[1][0]}</td>
+								<td><input type="number" min="0" max="${items[1][1]}" class="service__input" id="${items[1][0]}" placeholder="max ${items[1][1]}"></td>
+							</tr>
+							<tr class="available__service">
+								<td>${items[2][0]}</td>
+								<td><input type="number" min="0" max="${items[2][1]}" class="service__input" id="${items[2][0]}" placeholder="max ${items[2][1]}"></td>
+							</tr>							
+						</table>
+					</div>
+					<div class="services__cta">
+						<button value="cancel" id="cancel__btn" class="dialog__cta">DISCARD</button>
+						<button value="confirm" id="confirm__btn" class="dialog__cta" type="submit">CONFIRM ORDER</button>
+					</div>	
 				</form>
 	  		</dialog>
 		`;
@@ -418,6 +526,17 @@ const buildLocationList = (data) => {
 				dialogBox.showModal();
 			} else {
 				alert("The <dialog> API is not supported by this browser");
+			}
+		});
+
+		let form = document.getElementById(`dialog__form-${id}`);
+		form.addEventListener("submit", (e) => {
+			if (e.submitter.id === "confirm__btn") {
+				let order = {};
+				order[e.target[0].id] = e.target[0].value;
+				order[e.target[1].id] = e.target[1].value;
+				order[e.target[2].id] = e.target[2].value;
+				console.log(order);
 			}
 		});
 	});

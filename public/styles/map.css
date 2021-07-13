@@ -215,3 +215,96 @@ a:hover {
 .mapboxgl-popup {
 	padding-bottom: 50px;
 }
+
+.mapboxgl-ctrl-logo {
+	display: none !important;
+}
+
+.mapboxgl-ctrl-bottom-right {
+	display: none !important;
+}
+
+/* dialog box */
+.details__dialog {
+	width: 40vw;
+	height: 55vh;
+}
+
+.dest {
+	background-color: #480032;
+	color: #fff;
+	height: 8vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.dest__label {
+	color: #ffd36b;
+}
+
+.available__services {
+	height: 30vh;
+	width: 20rem;
+	background-color: #480032;
+	padding: 1rem 1.5rem;
+	margin: 1rem auto;
+	text-align: center;
+}
+
+.available__services-header {
+	color: #ffd36b;
+	margin-bottom: 0.5rem;
+	font-weight: 200;
+}
+
+.available__services__list {
+	text-decoration: none;
+	list-style-type: none;
+	padding: 0.5rem;
+}
+
+.available__service {
+	text-align: left;
+	margin: 5px;
+	color: #ffffff;
+}
+
+.available__service-header {
+	color: #f0e54f;
+}
+.service__input {
+	outline: none;
+	border: none;
+	padding: 2px 3px;
+	margin: auto 3px;
+	width: 90%;
+}
+
+.services__cta {
+	display: block;
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.dialog__cta {
+	margin: 0.5rem;
+	border: none;
+	outline: none;
+	background: #480032;
+	color: #ffd36b;
+	padding: 0.5rem 0.8rem;
+	letter-spacing: 2px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.dialog__cta:nth-child(1) {
+	background: #920032;
+}
+
+.dialog__cta:hover {
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transition: all 0.3s ease-in-out;
+}
