@@ -1,4 +1,4 @@
-import Heap from "collections/heap";
+const Heap = require("collections/heap");
 
 // get all vertices of graph
 const getAllServices = (serviceList) => {
@@ -49,5 +49,3 @@ const getShortestRoute = (servicesList, serviceReq) => {
 
 	return { data: services[dest], orderReq: order };
 };
-
-export { getAllServices, getShortestRoute };
