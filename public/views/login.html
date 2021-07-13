@@ -12,12 +12,14 @@
         <form action="/login" class="login__form" method="POST">
             <h1 class="auth__header">LOGIN</h1>
             <div class="auth__cta">
-                    <input type="text" name="username" class="auth__input" autocomplete="off" placeholder="user id">
-                    <input type="password" name="password" class="auth__input" autocomplete="off" placeholder="password">
+                <input type="email" name="useremail" class="auth__input" autocomplete="off" placeholder="e-mail address">
+                <select name="source" id="source-select">
+                    <option value=""> Choose your Source</option>
+                </select>
                 <input type="submit" value="CHECK IN &rarr;" id="auth__submit">
-                <a href="index.html" class="back__button">Go Back &rarr;</a>
             </div>
         </form>
     </main>
   </body>
+  <script src="../scripts/login-bundler.js"></script>
 </html>

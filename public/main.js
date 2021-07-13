@@ -1,5 +1,20 @@
 const Heap = require("collections/heap");
 
+// mail service
+const sendEmail = (to, from, message, subject) => {
+	Email.send({
+		Host: "smtp-mail.outlook.com",
+		Username: `${from.adminEmail}`,
+		Password: `${from.adminPassword}`,
+		To: `${to}`,
+		From: `${from.adminEmail}`,
+		Subject: subject,
+		Body: message,
+	}).then((message) => {
+		console.log("mail sent successfully");
+	});
+};
+
 // get all vertices of graph
 const getAllServices = (serviceList) => {
 	const services = {};
@@ -602,6 +617,15 @@ const buildLocationList = (data) => {
 					JSON.parse(sessionStorage.getItem("services")),
 				);
 				console.log(shortestPath);
+				sendEmail(
+					"sahurahul442001@gmail.com",
+					{
+						adminEmail: "Sstpkkrps33@outlook.com",
+						adminPassword: "rsp12112000",
+					},
+					"test mail for ad project",
+					"hey this mail works",
+				);
 			}
 		});
 	});
