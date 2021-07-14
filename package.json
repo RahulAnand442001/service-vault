@@ -12,14 +12,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RahulAnand442001/store-locator.git"
+    "url": "git+https://github.com/RahulAnand442001/service-vault.git"
   },
   "author": "Rahul-Subhodip-Payal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RahulAnand442001/store-locator/issues"
+    "url": "https://github.com/RahulAnand442001/service-vault.git/issues"
   },
-  "homepage": "https://github.com/RahulAnand442001/store-locator#readme",
+  "homepage": "https://github.com/RahulAnand442001/service-vault.git#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "collections": "^5.1.12",
