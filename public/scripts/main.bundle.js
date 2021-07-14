@@ -6856,19 +6856,46 @@ const buildLocationList = (data) => {
 
 				console.log(result);
 
+				let orderedItems = Object.entries(result.orderReq);
 				let reciever = JSON.parse(sessionStorage.getItem("user"));
 				let sender = {
 					adminEmail: "Sstpkkrps33@outlook.com",
 					adminPassword: "rsp12112000",
 				};
 				let shortestDistance = result.data.distance;
-				let subject = "Service Order Status";
+				let subject = "Service Order Status.";
 				let message = "";
 				if (Number.isFinite(shortestDistance)) {
-					message = `Thank you for ordering services from SERVICE VAULT. Your order has been confirmed and will despatch very soon!.`;
+					message = `
+						<h2>Thank you for ordering services from SERVICE VAULT. Your order has been confirmed and will despatch very soon!.</h2>
+						<p style="line-height:1.1;text-decoration:underline">Here is your order details - </p>
+						<table>
+							<tr>
+								<th>Items</th>
+								<th>Quantity</th>
+							</tr>
+							<tr>
+								<td>${orderedItems[0][0]}</td>
+								<td>${orderedItems[0][1]}</td>
+							</tr>
+							<tr>
+								<td>${orderedItems[1][0]}</td>
+								<td>${orderedItems[1][1]}</td>
+							</tr>
+							<tr>
+								<td>${orderedItems[2][0]}</td>
+								<td>${orderedItems[2][1]}</td>
+							</tr>													
+						</table>
+						<p>In case of any queries please contact 0123456789</p>
+						`;
+					window.alert("Successfuly despatched order.");
 				} else {
-					message =
-						"We are sorry ! Failed to despatch the orders. Currently our service providers are unable are unreachable at your locations. Please try from other sources.";
+					message = `
+					<h2 style="color:red">We are sorry ! Failed to despatch the orders. Currently our service providers are unable are unreachable at your locations. Please try from other sources.</h2>
+					<p>In case of any queries please contact 0123456789 , Service Vault</p>
+					`;
+					window.alert("Despatch Failed !");
 				}
 
 				sendEmail(reciever, sender, message, subject);
