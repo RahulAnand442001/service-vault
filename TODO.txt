@@ -1,4 +1,0 @@
-complete rest functionality of mailing
-some bugs fixation
-ui featurings
-docs
