@@ -612,20 +612,29 @@ const buildLocationList = (data) => {
 					}),
 				);
 
-				let shortestPath = getShortestRoute(
+				const result = getShortestRoute(
 					stores,
 					JSON.parse(sessionStorage.getItem("services")),
 				);
-				console.log(shortestPath);
-				sendEmail(
-					"sahurahul442001@gmail.com",
-					{
-						adminEmail: "Sstpkkrps33@outlook.com",
-						adminPassword: "rsp12112000",
-					},
-					"test mail for ad project",
-					"hey this mail works",
-				);
+
+				console.log(result);
+
+				let reciever = JSON.parse(sessionStorage.getItem("user"));
+				let sender = {
+					adminEmail: "Sstpkkrps33@outlook.com",
+					adminPassword: "rsp12112000",
+				};
+				let shortestDistance = result.data.distance;
+				let subject = "Service Order Status";
+				let message = "";
+				if (Number.isFinite(shortestDistance)) {
+					message = `Thank you for ordering services from SERVICE VAULT. Your order has been confirmed and will despatch very soon!.`;
+				} else {
+					message =
+						"We are sorry ! Failed to despatch the orders. Currently our service providers are unable are unreachable at your locations. Please try from other sources.";
+				}
+
+				sendEmail(reciever, sender, message, subject);
 			}
 		});
 	});
