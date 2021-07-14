@@ -1,3 +1,4 @@
+require("dotenv").config();
 import path from "path";
 import express from "express";
 import cors from "cors";
