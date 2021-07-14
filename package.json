@@ -4,7 +4,7 @@
   "description": "webisite for locating stores and ordering services",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon ./server.js --exec babel-node -e js"
+    "start": "node ./server.js --exec babel-node -e js"
   },
   "keywords": [
     "babel",
